@@ -79,7 +79,7 @@ function AudioWaveform({ data }: AudioWaveformProps) {
         "fal-ai/ffmpeg-api/waveform",
         {
           input: {
-            media_url: resolveMediaUrl(data),
+            media_url: resolveMediaUrl(data) ?? "",
             points_per_second: 5,
             precision: 3,
           },

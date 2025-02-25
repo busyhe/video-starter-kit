@@ -350,7 +350,7 @@ export default function RightPanel({
         await db.media
           .update(media.id, {
             ...media,
-            metadata: mediaMetadata?.media || {},
+            metadata: (mediaMetadata as any)?.media || {},
           })
           .finally(() => {
             queryClient.invalidateQueries({

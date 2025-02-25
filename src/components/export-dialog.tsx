@@ -49,7 +49,7 @@ export function ExportDialog({ onOpenChange, ...props }: ExportDialogProps) {
         keyframes: composition.frames[track.id].map((frame) => ({
           timestamp: frame.timestamp,
           duration: frame.duration,
-          url: resolveMediaUrl(mediaItems[frame.data.mediaId]),
+          url: resolveMediaUrl(mediaItems[frame.data.mediaId]) ?? '',
         })),
       }));
       if (videoData.length === 0) {
