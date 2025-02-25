@@ -13,7 +13,7 @@ export default function Header({
         <Logo />
       </h1>
       <nav className="flex flex-row items-center justify-end gap-1">
-        <Button variant="ghost" size="sm" asChild>
+        {/* <Button variant="ghost" size="sm" asChild>
           <a href="https://fal.ai" target="_blank" rel="noopener noreferrer">
             fal.ai
           </a>
@@ -26,7 +26,7 @@ export default function Header({
           >
             GitHub
           </a>
-        </Button>
+        </Button> */}
         {process.env.NEXT_PUBLIC_CUSTOM_KEY && openKeyDialog && (
           <Button variant="ghost" size="icon" onClick={openKeyDialog}>
             <SettingsIcon className="w-6 h-6" />
